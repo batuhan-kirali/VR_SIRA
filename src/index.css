@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --color-moodist: #444F6F;
+  --color-moodist-mid: #242F4E;
+  --color-moodist-deep: #1C2334;
+  --color-moodist-ink: #2B344D;
+  --color-moodist-muted: #BFC6DD;
+  --color-moodist-glow-soft: #96ABDF;
+  --color-moodist-glow-bright: #B1C6FC;
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Reusable Dark Atmospheric + Glassmorphism Design System Utilities */
+@layer components {
+  .moodist-glass-card {
+    background-color: rgb(255 255 255 / 0.06);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgb(255 255 255 / 0.2);
+    border-radius: 28px;
+    box-shadow:
+      0 20px 44px -24px rgb(8 12 24 / 0.72),
+      inset 0 1px 0 rgb(255 255 255 / 0.14);
+  }
+
+  .moodist-glass-card-called {
+    background-color: rgb(16 185 129 / 0.17);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgb(110 231 183 / 0.62);
+    border-radius: 28px;
+    box-shadow:
+      0 22px 54px -18px rgb(16 185 129 / 0.48),
+      inset 0 1px 0 rgb(167 243 208 / 0.28);
+  }
+
+  .moodist-glass-badge {
+    background-color: rgb(255 255 255 / 0.06);
+    border: 1px solid rgb(255 255 255 / 0.15);
+    border-radius: 9999px;
+  }
+
+  .moodist-primary-btn {
+    background-color: #ffffff;
+    color: #2b344d;
+    border-radius: 16px;
+    box-shadow:
+      0 14px 32px -10px rgb(10 15 30 / 0.55),
+      0 2px 6px rgb(255 255 255 / 0.12);
+  }
+
+  .vr-hero-mask {
+    mask-image: radial-gradient(
+      circle at center,
+      black 44%,
+      rgba(0, 0, 0, 0.7) 58%,
+      transparent 73%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      black 44%,
+      rgba(0, 0, 0, 0.7) 58%,
+      transparent 73%
+    );
+  }
+
+  .moodist-glass-input {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgb(255 255 255 / 0.16);
+    background-color: rgb(255 255 255 / 0.06);
+    color: #ffffff;
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease,
+      box-shadow 150ms ease;
+  }
+
+  .moodist-glass-input::placeholder {
+    color: rgb(191 198 221 / 0.55);
+  }
+
+  .moodist-glass-input:focus {
+    outline: none;
+    border-color: rgb(177 198 252 / 0.75);
+    background-color: rgb(255 255 255 / 0.1);
+    box-shadow: 0 0 0 3px rgb(177 198 252 / 0.18);
+  }
+
+  .moodist-glass-option {
+    border-radius: 16px;
+    border: 1px solid rgb(255 255 255 / 0.15);
+    background-color: rgb(255 255 255 / 0.05);
+    color: rgb(255 255 255 / 0.9);
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease,
+      transform 120ms ease,
+      box-shadow 150ms ease;
+  }
+
+  .moodist-glass-option:hover {
+    border-color: rgb(255 255 255 / 0.3);
+    background-color: rgb(255 255 255 / 0.09);
+  }
+
+  .moodist-glass-option-selected {
+    border-radius: 16px;
+    border: 1px solid rgb(255 255 255 / 0.65);
+    background-color: rgb(255 255 255 / 0.16);
+    color: #ffffff;
+    box-shadow:
+      0 10px 24px -14px rgb(8 12 24 / 0.7),
+      inset 0 1px 0 rgb(255 255 255 / 0.22);
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease,
+      transform 120ms ease,
+      box-shadow 150ms ease;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Moodist VR Terapi Deneyimi",
+  "description": "Moodist Hastanesi 360° Sanal Gerçeklik (VR) Terapi Deneyimi dikey mobil uygulaması.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
